@@ -65,10 +65,10 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Description cannot be empty", Toast.LENGTH_SHORT).show();
                     return;
                 }
-//                if(photoFile == null || ivPostImage.getDrawable() == null){
-//                    Toast.makeText(MainActivity.this, "There is no image", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
+                if(photoFile == null || ivPostImage.getDrawable() == null){
+                    Toast.makeText(MainActivity.this, "There is no image", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 ParseUser currentUser = ParseUser.getCurrentUser();
                 savePost(description, currentUser, photoFile);
             }
